@@ -6,7 +6,6 @@ import {
   ContactNumber,
   Button,
 } from './ContactItem.styled';
-// import { delContactSlice } from 'redux/contactsSlice';
 import { useDispatch } from 'react-redux';
 import { delContact } from 'redux/thunk';
 
