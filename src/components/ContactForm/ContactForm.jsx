@@ -25,8 +25,9 @@ export default function ContactForm() {
   const handleSubmit = event => {
     event.preventDefault();
 
-    contacts.some(contact => contact.name.toLowerCase().trim() === name.toLowerCase().trim())
-      ? alert(`${name} is duplicate contact`)
+    contacts.some(contact => contact.name.toLowerCase().trim() === name.toLowerCase().trim()
+      || contact.number.toLowerCase().trim() === number.toLowerCase().trim())
+      ? alert(`${name}: ${number} is duplicate contact or number`)
       : dispatch(addContact({ name, number }))
 
     formReset();
